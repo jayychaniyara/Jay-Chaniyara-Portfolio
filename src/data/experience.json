@@ -4,10 +4,11 @@
     "company": "Civica India",
     "period": "Oct 2024 – Present",
     "responsibilities": [
-      "Developed scalable EDU web app features using Angular & .NET Core.",
-      "Solved production issues and enhanced user experience.",
-      "Implemented complex business logic for educational software solutions.",
-      "Collaborated with cross-functional teams to meet project deadlines."
+      "Lead the design and development of new features for EDU domain web applications, enhancing functionality for respective users.",
+      "Develop scalable modules features by utilizing technologies like Angular, MVC, .NET Core, WebAPI, and SQL Server.",
+      "Collaborate with cross-functional teams (product, design, and QA) to ensure seamless integration and smooth user experience across all platforms.",
+      "Troubleshoot, resolve, and prioritise production issues, ensuring system stability and minimizing downtime for end users.",
+      "Contribute to the architectural design and refactoring efforts to improve code maintainability, performance, and scalability."
     ]
   },
   {
@@ -15,10 +16,46 @@
     "company": "Civica India",
     "period": "Oct 2022 – Sep 2024",
     "responsibilities": [
-      "Built full-stack modules with Angular & Web API.",
-      "Involved in code reviews and performance improvements.",
-      "Developed and maintained database stored procedures in SQL Server.",
-      "Participated in agile development processes and sprint planning."
+      "Assisted in the design and development of features for web applications in EDU domain.",
+      "Collaborated with senior developers to debug and resolve high-priority issues, ensuring a smooth user experience and reducing downtime.",
+      "Worked with Angular, .NET Core, Web API and SQL Server to build and maintain both frontend and backend components of the application.",
+      "Participated in unit testing, code reviews, and documentation, contributing to the overall quality and maintainability of the codebase.",
+      "Assisted in optimizing database queries and improving the performance of the application, handling both front-end and back-end tasks as needed."
+    ]
+  },
+  {
+    "title": "Graduate Trainee",
+    "company": "Civica India",
+    "period": "Jul 2022 – Oct 2022",
+    "responsibilities": [
+      "Completed the Horizon training program at Civica, gaining comprehensive expertise in ASP.NET, ASP.NET Core, ASP.NET Web API, Angular, and SQL Server.",
+      "Developed practical projects to apply theoretical knowledge, showcasing hands-on experience in web application development and software architecture, available on GitHub.",
+      "Gained proficiency in unit testing and repository management systems, ensuring robust and maintainable code.",
+      "Enhanced corporate communication skills, including formal email writing and professional interaction within a team environment.",
+      "Collaborated on team projects, applying agile methodologies and best practices in software development."
+    ]
+  },
+  {
+    "title": "Software Developer Trainee",
+    "company": "Rishabh Software",
+    "period": "Jan 2022 – Jul 2022",
+    "responsibilities": [
+      "Completed a MEAN stack internship at Rishabh Software, gaining hands-on experience in building full-stack applications using Angular, MongoDB, Express, and Node.js.",
+      "Developed and deployed multiple practice projects, demonstrating proficiency in front-end (Angular) and back-end (Node.js, Express) development, with project code available on GitHub.",
+      "Designed and implemented RESTful APIs using Express.js, and integrated with MongoDB to manage data storage and retrieval efficiently.",
+      "Gained practical knowledge of version control systems like Git, agile development methodologies, and collaborative coding practices."
+    ]
+  },
+  {
+    "title": "Robocon Member",
+    "company": "Asia-Pacific Broadcasting Union",
+    "period": "Jul 2017 – Mar 2018",
+    "responsibilities": [
+      "Participated as a key member of the college team in Robocon, an international robotics competition, contributing to the design and development of autonomous robots.",
+      "Programmed micro-controllers for controlling Bluetooth-enabled devices and sensors, ensuring precise data reading and real-time operational adjustments.",
+      "Gained hands-on experience in circuit design, including both analog and digital components, to ensure reliable communication between hardware and software systems.",
+      "Collaborated on the integration of various sensors (e.g., distance, temperature, and motion sensors) to enhance the robot’s functionality and decision-making abilities.",
+      " Developed problem-solving and troubleshooting skills by debugging hardware and software issues under time pressure, ensuring the robot’s smooth operation during the contest."
     ]
   }
 ]
