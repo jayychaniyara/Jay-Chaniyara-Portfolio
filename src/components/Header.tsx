@@ -79,7 +79,7 @@ const Header = () => {
         </a>
 
         {!isMobile && (
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -92,7 +92,7 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="/jay-chaniyara-resume.pdf"
+              href="https://drive.google.com/uc?export=download&id=1gm1TaExpxgb7CDkd5ZH42SS7DE0rsTt_"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-4 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors"

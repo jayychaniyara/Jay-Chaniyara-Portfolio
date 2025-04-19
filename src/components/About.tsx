@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Mail, Linkedin } from "lucide-react";
+import JayProfile from "../data/JayChaniyara.jpeg";
 
 const About = () => {
   return (
@@ -66,8 +67,11 @@ const About = () => {
           <div className="lg:col-span-5">
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden flex items-center justify-center">
-                {/* This could be replaced with an actual image if available */}
-                <div className="text-6xl font-bold text-primary">JC</div>
+                <img
+                  src={JayProfile} // Use the imported image
+                  alt="Jay Chaniyara"
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 w-full h-full border-4 border-primary/20 rounded-2xl -z-10"></div>
             </div>

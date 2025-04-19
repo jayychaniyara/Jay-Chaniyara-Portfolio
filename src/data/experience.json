@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "Civica India",
+    "period": "Oct 2024 – Present",
+    "responsibilities": [
+      "Developed scalable EDU web app features using Angular & .NET Core.",
+      "Solved production issues and enhanced user experience.",
+      "Implemented complex business logic for educational software solutions.",
+      "Collaborated with cross-functional teams to meet project deadlines."
+    ]
+  },
+  {
+    "title": "Junior Software Engineer",
+    "company": "Civica India",
+    "period": "Oct 2022 – Sep 2024",
+    "responsibilities": [
+      "Built full-stack modules with Angular & Web API.",
+      "Involved in code reviews and performance improvements.",
+      "Developed and maintained database stored procedures in SQL Server.",
+      "Participated in agile development processes and sprint planning."
+    ]
+  }
+]
