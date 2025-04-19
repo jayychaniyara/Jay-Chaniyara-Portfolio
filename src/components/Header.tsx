@@ -23,7 +23,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const resumeDownloadLink =
-    "https://drive.google.com/uc?export=download&id=1gm1TaExpxgb7CDkd5ZH42SS7DE0rsTt_";
+    "https://drive.google.com/uc?export=download&id=1moYm0L-pgLsBJ74qihRKqNl-bsJju1yH";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +62,6 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      {/* Radial purple background applied only to header */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div
           className="w-full h-full"
