@@ -1,0 +1,48 @@
+{
+  "education": [
+    {
+      "degree": "B.E. in Information Technology",
+      "institution": "Vadodara Institute of Engineering",
+      "year": "Graduated 2021",
+      "extracurriculars": [
+        {
+          "title": "Robocon 2017–18 Participant",
+          "organization": "Asia-Pacific Broadcasting Union",
+          "description": "Worked on autonomous Bluetooth-enabled robots"
+        },
+        {
+          "title": "Robotics Events",
+          "organization": "PRAKARSH, TECHKSHETRA, FOOTPRINT",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Microsoft Azure Fundamentals (AZ-900)",
+      "issuer": "Microsoft",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1200px-Microsoft_Azure_Logo.svg.png",
+      "certificateLink": "https://learn.microsoft.com/en-in/users/jaychaniyara-2876/credentials/bcd64a9c909b29c3?ref=https%3A%2F%2Fwww.linkedin.com%2F"
+    },
+    {
+      "title": "M001:MongoDB Basica",
+      "issuer": "MongoDB",
+      "logo": "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+      "certificateLink": "https://university.mongodb.com/course_completion/f0ed98d8-f738-4a3c-9ae9-7565d16aff9a?utm_source=linkedin&utm_medium=social&utm_campaign=university_social_sharing"
+    },
+    {
+      "title": "C# (Basic)",
+      "issuer": "HackerRank",
+      "logo": "https://cdn.worldvectorlogo.com/logos/hackerrank.svg",
+      "certificateLink": "https://www.hackerrank.com/certificates/0081eb2f9fe5"
+    },
+
+    {
+      "title": "SQL (Basic)",
+      "issuer": "HackerRank",
+      "logo": "https://cdn.worldvectorlogo.com/logos/hackerrank.svg",
+      "certificateLink": "https://www.hackerrank.com/certificates/799972866cbc"
+    }
+  ]
+}
