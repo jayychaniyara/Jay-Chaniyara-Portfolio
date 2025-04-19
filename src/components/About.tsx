@@ -66,13 +66,16 @@ const About = () => {
 
           <div className="lg:col-span-5">
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden flex items-center justify-center">
+              <div className="absolute -inset-4 blur-2xl opacity-20 bg-gradient-to-br from-primary to-accent rounded-3xl z-0" />
+
+              <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden flex items-center justify-center relative z-10 shadow-2xl">
                 <img
-                  src={JayProfile} // Use the imported image
+                  src={JayProfile}
                   alt="Jay Chaniyara"
                   className="object-cover w-full h-full"
                 />
               </div>
+
               <div className="absolute -bottom-6 -right-6 w-full h-full border-4 border-primary/20 rounded-2xl -z-10"></div>
             </div>
           </div>

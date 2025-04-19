@@ -1,5 +1,7 @@
+// components/Hero.tsx
 import React, { useEffect, useRef } from "react";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { useTypingEffect } from "@/hooks/useTypingEffect";
 
 const Hero = () => {
   const firstNameRef = useRef<HTMLSpanElement>(null);
@@ -8,6 +10,10 @@ const Hero = () => {
   const descRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
 
+  const typedText = useTypingEffect(
+    "Results-driven and detail-oriented full-stack developer with 3+ years of experience in building scalable web applications using Angular, .NET Core, and SQL Server.",
+    25
+  );
   useEffect(() => {
     const elements = [
       { ref: firstNameRef, delay: 100 },
@@ -34,18 +40,24 @@ const Hero = () => {
     >
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 relative">
             <span
               ref={firstNameRef}
-              className="transition-all duration-700 opacity-0 translate-y-8 inline-block"
+              className="transition-all duration-700 opacity-0 translate-y-8 inline-block relative group"
             >
-              <span className="text-primary">Jay</span>
+              <span className="text-primary relative z-10 group-hover:drop-shadow-glow">
+                Jay
+              </span>
+              <span className="absolute inset-0 bg-primary/20 blur-xl opacity-50 rounded-lg z-0 transition-all duration-700 group-hover:opacity-70"></span>
             </span>{" "}
             <span
               ref={lastNameRef}
-              className="transition-all duration-700 opacity-0 translate-y-8 inline-block"
+              className="transition-all duration-700 opacity-0 translate-y-8 inline-block relative group"
             >
-              Chaniyara
+              <span className="relative z-10 text-foreground group-hover:drop-shadow-glow">
+                Chaniyara
+              </span>
+              <span className="absolute inset-0 bg-accent/20 blur-xl opacity-50 rounded-lg z-0 transition-all duration-700 group-hover:opacity-70"></span>
             </span>
           </h1>
 
@@ -60,9 +72,8 @@ const Hero = () => {
             ref={descRef}
             className="text-lg text-foreground/70 mb-10 max-w-2xl mx-auto transition-all duration-700 opacity-0 translate-y-8"
           >
-            Results-driven and detail-oriented full-stack developer with 3+
-            years of experience in building scalable web applications using
-            Angular, .NET Core, and SQL Server.
+            {typedText}
+            <span className="text-foreground/50 animate-pulse">|</span>
           </p>
 
           <div
