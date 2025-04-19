@@ -3,7 +3,7 @@ import { Code, ExternalLink, FileCode, Github } from "lucide-react";
 import { useGitHubProjects } from "@/hooks/useGitHubProjects";
 import { Button } from "@/components/ui/button";
 
-const PROJECTS_PER_PAGE = 6;
+const PROJECTS_PER_PAGE = 3;
 
 const Projects = () => {
   const { data: projects, isLoading, error } = useGitHubProjects();
@@ -14,6 +14,16 @@ const Projects = () => {
   };
 
   const hasMoreProjects = projects ? visibleProjects < projects.length : false;
+
+  const sortedProjects = projects?.slice().sort((a, b) => {
+    const aHasPreview = !!a.homepage;
+    const bHasPreview = !!b.homepage;
+
+    if (aHasPreview && !bHasPreview) return -1;
+    if (!aHasPreview && bHasPreview) return 1;
+
+    return a.name.localeCompare(b.name);
+  });
 
   return (
     <section id="projects">
@@ -33,7 +43,7 @@ const Projects = () => {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {projects?.slice(0, visibleProjects).map((project) => (
+          {sortedProjects?.slice(0, visibleProjects).map((project) => (
             <div
               key={project.id}
               className="card group relative overflow-hidden flex flex-col"
