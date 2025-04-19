@@ -8,6 +8,7 @@ interface GitHubRepo {
   html_url: string;
   topics: string[];
   language: string;
+  homepage?: string; 
 }
 
 async function fetchGitHubProjects(): Promise<GitHubRepo[]> {
