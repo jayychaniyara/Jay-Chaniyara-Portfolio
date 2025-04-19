@@ -1,12 +1,11 @@
-
-import React from 'react';
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import React from "react";
+import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -19,28 +18,28 @@ const Footer = () => {
             </h2>
             <p className="text-foreground/70">Full-Stack Software Developer</p>
           </div>
-          
+
           <div className="flex items-center space-x-4">
-            <a 
-              href="https://github.com/" 
-              target="_blank" 
+            <a
+              href="https://github.com/jayychaniyara"
+              target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-primary/10 hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <Github size={20} />
             </a>
-            <a 
-              href="https://linkedin.com/in/jayychaniyara" 
-              target="_blank" 
+            <a
+              href="https://linkedin.com/in/jayychaniyara"
+              target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-primary/10 hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
             </a>
-            <a 
-              href="mailto:chaniyarajaykumar@gmail.com" 
+            <a
+              href="mailto:chaniyarajaykumar@gmail.com"
               className="p-2 rounded-full hover:bg-primary/10 hover:text-primary transition-colors"
               aria-label="Email"
             >
@@ -48,12 +47,12 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-foreground/60 mb-4 md:mb-0">
             &copy; {currentYear} Jay Chaniyara. All rights reserved.
           </p>
-          
+
           <button
             onClick={scrollToTop}
             className="inline-flex items-center text-sm hover:text-primary transition-colors"

@@ -1,13 +1,12 @@
-
-import React from 'react';
-import { Mail, Phone, Linkedin } from 'lucide-react';
+import React from "react";
+import { Mail, Phone, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
     <section id="contact">
       <div className="container">
         <h2 className="section-title">Get In Touch</h2>
-        
+
         <div className="max-w-3xl mx-auto">
           <div className="card space-y-6">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-lg hover:bg-secondary/50 transition-colors">
@@ -16,7 +15,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-medium mb-1">Email</h3>
-                <a 
+                <a
                   href="mailto:chaniyarajaykumar@gmail.com"
                   className="text-foreground/70 hover:text-primary transition-colors"
                 >
@@ -31,11 +30,11 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-medium mb-1">Mobile</h3>
-                <a 
+                <a
                   href="tel:+916352802737"
                   className="text-foreground/70 hover:text-primary transition-colors"
                 >
-                  +91-6352802737
+                  +91 6352802737
                 </a>
               </div>
             </div>
@@ -46,7 +45,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-medium mb-1">LinkedIn</h3>
-                <a 
+                <a
                   href="https://linkedin.com/in/jayychaniyara"
                   target="_blank"
                   rel="noopener noreferrer"
