@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -21,6 +21,9 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
+
+  const resumeDownloadLink =
+    "https://drive.google.com/uc?export=download&id=1gm1TaExpxgb7CDkd5ZH42SS7DE0rsTt_";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,57 +95,60 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="https://drive.google.com/uc?export=download&id=1gm1TaExpxgb7CDkd5ZH42SS7DE0rsTt_"
+              href={resumeDownloadLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors"
+              className="ml-4 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors flex items-center gap-2"
             >
+              <Download size={16} />
               Resume
             </a>
           </nav>
         )}
 
         {isMobile && (
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <button
-                className="md:hidden flex items-center p-2 text-foreground"
-                aria-label="Toggle menu"
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </SheetTrigger>
-            <SheetContent
-              side="top"
-              className="w-full h-screen bg-background/95 backdrop-blur-sm pt-20"
+          <div className="flex items-center gap-2">
+            <a
+              href={resumeDownloadLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors flex items-center gap-1 text-sm"
             >
-              <nav className="flex flex-col space-y-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={handleLinkClick}
-                    className={`text-lg py-2 border-b border-border px-4 ${
-                      activeSection === link.href.substring(1)
-                        ? "text-primary"
-                        : "text-foreground/80"
-                    }`}
-                  >
-                    {link.name}
-                  </a>
-                ))}
-                <a
-                  href="/jay-chaniyara-resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleLinkClick}
-                  className="mt-4 py-3 text-center rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors"
+              <Download size={14} />
+              Resume
+            </a>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <button
+                  className="md:hidden flex items-center p-2 text-foreground"
+                  aria-label="Toggle menu"
                 >
-                  Resume
-                </a>
-              </nav>
-            </SheetContent>
-          </Sheet>
+                  {isOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+              </SheetTrigger>
+              <SheetContent
+                side="top"
+                className="w-full h-screen bg-background/95 backdrop-blur-sm pt-20"
+              >
+                <nav className="flex flex-col space-y-4">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={handleLinkClick}
+                      className={`text-lg py-2 border-b border-border px-4 ${
+                        activeSection === link.href.substring(1)
+                          ? "text-primary"
+                          : "text-foreground/80"
+                      }`}
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         )}
       </div>
     </header>
