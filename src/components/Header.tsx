@@ -1,8 +1,7 @@
-
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useIsMobile } from '@/hooks/use-mobile';
+import { useIsMobile } from "@/hooks/use-mobile";
 
 type NavLink = {
   name: string;
@@ -18,7 +17,7 @@ const navLinks: NavLink[] = [
 ];
 
 const Header = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
@@ -26,23 +25,26 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-      
-      const sections = document.querySelectorAll('section[id]');
-      let currentActive = '';
-      
+
+      const sections = document.querySelectorAll("section[id]");
+      let currentActive = "";
+
       sections.forEach((section) => {
         const sectionTop = (section as HTMLElement).offsetTop - 100;
         const sectionHeight = (section as HTMLElement).offsetHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          currentActive = section.getAttribute('id') || '';
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          currentActive = section.getAttribute("id") || "";
         }
       });
-      
+
       setActiveSection(currentActive);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLinkClick = () => {
@@ -50,29 +52,48 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-sm shadow-md"
+          : "bg-transparent"
+      }`}
+    >
+      {/* Radial purple background applied only to header */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div
+          className="w-full h-full"
+          style={{
+            background:
+              "radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.1), transparent 70%)"
+          }}
+        />
+      </div>
+
       <div className="container flex justify-between items-center h-16 md:h-20">
-        <a href="#top" className="text-xl md:text-2xl font-bold text-foreground">
+        <a
+          href="#top"
+          className="text-xl md:text-2xl font-bold text-foreground"
+        >
           <span className="text-primary">Jay</span> Chaniyara
         </a>
 
-        {/* Desktop Navigation */}
         {!isMobile && (
           <nav className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
+                className={`nav-link ${
+                  activeSection === link.href.substring(1) ? "active" : ""
+                }`}
               >
                 {link.name}
               </a>
             ))}
-            <a 
-              href="/jay-chaniyara-resume.pdf" 
-              target="_blank" 
+            <a
+              href="/jay-chaniyara-resume.pdf"
+              target="_blank"
               rel="noopener noreferrer"
               className="ml-4 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors"
             >
@@ -81,18 +102,20 @@ const Header = () => {
           </nav>
         )}
 
-        {/* Mobile Menu */}
         {isMobile && (
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <button 
+              <button
                 className="md:hidden flex items-center p-2 text-foreground"
                 aria-label="Toggle menu"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </SheetTrigger>
-            <SheetContent side="top" className="w-full h-screen bg-background/95 backdrop-blur-sm pt-20">
+            <SheetContent
+              side="top"
+              className="w-full h-screen bg-background/95 backdrop-blur-sm pt-20"
+            >
               <nav className="flex flex-col space-y-4">
                 {navLinks.map((link) => (
                   <a
@@ -100,15 +123,17 @@ const Header = () => {
                     href={link.href}
                     onClick={handleLinkClick}
                     className={`text-lg py-2 border-b border-border px-4 ${
-                      activeSection === link.href.substring(1) ? 'text-primary' : 'text-foreground/80'
+                      activeSection === link.href.substring(1)
+                        ? "text-primary"
+                        : "text-foreground/80"
                     }`}
                   >
                     {link.name}
                   </a>
                 ))}
-                <a 
-                  href="/jay-chaniyara-resume.pdf" 
-                  target="_blank" 
+                <a
+                  href="/jay-chaniyara-resume.pdf"
+                  target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleLinkClick}
                   className="mt-4 py-3 text-center rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors"
