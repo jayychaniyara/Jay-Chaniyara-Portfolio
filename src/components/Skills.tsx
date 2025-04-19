@@ -1,6 +1,12 @@
-
-import React from 'react';
-import { Code, Database, Terminal, LayoutGrid, GitBranch, Workflow } from 'lucide-react';
+import React from "react";
+import {
+  Code,
+  Database,
+  Terminal,
+  LayoutGrid,
+  GitBranch,
+  Workflow
+} from "lucide-react";
 
 type SkillCategory = {
   title: string;
@@ -12,7 +18,15 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
     icon: <LayoutGrid size={24} />,
-    skills: ["Angular", "JavaScript", "TypeScript", "HTML", "CSS", "Bootstrap", "jQuery"]
+    skills: [
+      "Angular",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "jQuery"
+    ]
   },
   {
     title: "Backend",
@@ -46,15 +60,15 @@ const Skills = () => {
     <section id="skills">
       <div className="container">
         <h2 className="section-title">Skills & Expertise</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {skillCategories.map((category, index) => (
-            <div 
-              key={category.title} 
+            <div
+              key={category.title}
               className="card hover:border-primary/30 group"
-              style={{ 
+              style={{
                 animationDelay: `${index * 100}ms`,
-                animationFillMode: 'both'
+                animationFillMode: "both"
               }}
             >
               <div className="flex items-center mb-4 gap-3">
@@ -63,14 +77,17 @@ const Skills = () => {
                 </div>
                 <h3 className="text-xl font-semibold">{category.title}</h3>
               </div>
-              
+
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <span 
-                    key={skill} 
-                    className="px-3 py-1 text-sm rounded-full bg-secondary border border-border hover:border-primary/30 transition-colors"
+                  <span
+                    key={skill}
+                    className="relative inline-flex items-center justify-center"
                   >
-                    {skill}
+                    <span className="absolute inset-0 rounded-full bg-primary/20 blur-md opacity-50 scale-110"></span>
+                    <span className="relative px-3 py-1 text-sm rounded-full bg-secondary border border-border hover:border-primary/30 transition-colors">
+                      {skill}
+                    </span>
                   </span>
                 ))}
               </div>
