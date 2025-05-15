@@ -124,7 +124,6 @@ const Hero = () => {
         </a>
       </div>
 
-      {/* Background gradient */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary/5 to-transparent pointer-events-none -z-10"></div>
     </section>
   );
