@@ -5,8 +5,11 @@ import {
   Terminal,
   LayoutGrid,
   GitBranch,
-  Workflow
+  Workflow,
+  DraftingCompassIcon,
+  PictureInPicture
 } from "lucide-react";
+import { Data3DTexture } from "three/src/Three.Core.js";
 
 type SkillCategory = {
   title: string;
@@ -31,7 +34,14 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Backend",
     icon: <Code size={24} />,
-    skills: ["ASP.NET Core", "MVC", "Web API", "Node.js"]
+    skills: [
+      "ASP.NET Core",
+      "MVC",
+      "Web API",
+      "Node.js",
+      "Microservices",
+      "RESTful APIs"
+    ]
   },
   {
     title: "Database",
@@ -41,12 +51,29 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Tools",
     icon: <Terminal size={24} />,
-    skills: ["Git", "Azure DevOps", "Docker", "RabbitMQ", "Postman"]
+    skills: [
+      "Git",
+      "Azure DevOps",
+      "Docker",
+      "RabbitMQ",
+      "Postman",
+      "Playwright"
+    ]
   },
   {
     title: "Methodologies",
     icon: <GitBranch size={24} />,
-    skills: ["Agile/Scrum", "RESTful APIs", "Unit Testing (xUnit)"]
+    skills: ["Agile/Scrum", "Unit Testing (xUnit)"]
+  },
+  {
+    title: "Data Structures",
+    icon: <DraftingCompassIcon size={24} />,
+    skills: ["String", "Array", "Queue", "Stack"]
+  },
+  {
+    title: "Principles",
+    icon: <PictureInPicture size={24} />,
+    skills: ["SOLID", "OOP", "Clean Code", "Design Patterns"]
   },
   {
     title: "Additional",
