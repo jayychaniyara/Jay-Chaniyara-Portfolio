@@ -12,9 +12,9 @@ const About = () => {
           <div className="lg:col-span-7 space-y-6 animate-fade-in">
             <p className="text-lg leading-relaxed">
               I'm a results-driven and detail-oriented full-stack developer with
-              over 3.5+ years of experience in building scalable web applications.
-              My expertise lies in working with Angular, .NET Core, MVC, Web
-              API, and SQL Server.
+              over 3.5+ years of experience in building scalable web
+              applications. My expertise lies in working with Angular, .NET
+              Core, MVC, Web API, and SQL Server.
             </p>
 
             <p className="text-lg leading-relaxed">

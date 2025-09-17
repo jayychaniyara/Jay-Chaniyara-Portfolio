@@ -11,7 +11,7 @@ const Hero = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
 
   const typedText = useTypingEffect(
-    "Results-driven and detail-oriented full-stack developer with 3+ years of experience in building scalable web applications using Angular, .NET Core, and SQL Server.",
+    "Results-driven and detail-oriented full-stack developer with 3.5+ years of experience in building scalable web applications using Angular, React, .NET Core, and SQL Server.",
     25
   );
   useEffect(() => {
