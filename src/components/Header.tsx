@@ -23,7 +23,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const resumeDownloadLink =
-    "https://drive.google.com/uc?export=download&id=1M5uAWE-YbvjDCsHaY-Fn3jbZJKIbIpuU";
+    "https://drive.google.com/uc?export=download&id=1kuMgCZ5n9qlFfu_1EOo3H40AkQPKZTZO";
 
   useEffect(() => {
     const handleScroll = () => {
