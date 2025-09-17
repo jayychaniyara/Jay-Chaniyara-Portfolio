@@ -26,7 +26,7 @@ const About = () => {
 
             <p className="text-lg leading-relaxed">
               Beyond my professional work, I have a background in robotics
-              competitions, including participation in ROBOCON 2017–18 and
+              competitions, including participation in Robocon 2017–18 and
               various robotics events. This experience has enhanced my
               problem-solving abilities and collaborative mindset.
             </p>
