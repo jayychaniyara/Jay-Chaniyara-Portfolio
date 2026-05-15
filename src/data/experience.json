@@ -1,8 +1,20 @@
 [
   {
+    "title": "SSR - Software Engineer",
+    "company": "Globant",
+    "period": "MAR 2026 - Present",
+    "responsibilities": [
+      "Contributing to development using technologies such as Angular, .NET Core, Web APIs, SQL Server, MongoDB, and cloud-based services.",
+      "Exploring and integrating AI-driven solutions to enhance application efficiency, automation, and user experience.",
+      "Collaborating with cross-functional teams to build secure, maintainable, and high-performance enterprise applications.",
+      "Involved in performance optimization, feature enhancements, debugging, and implementation of engineering best practices.",
+      "Working with modern development workflows including Git, CI/CD pipelines, Agile methodologies, and automated testing practices."
+    ]
+  },
+  {
     "title": "Software Engineer",
     "company": "Civica India",
-    "period": "Oct 2024 – Present",
+    "period": "Oct 2024 – MAR 2026",
     "responsibilities": [
       "Lead the design and development of new features for EDU domain web applications, enhancing functionality for respective users.",
       "Develop scalable modules features by utilizing technologies like Angular, MVC, .NET Core, WebAPI, and SQL Server.",
