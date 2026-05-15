@@ -22,9 +22,6 @@ const Header = () => {
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
 
-  const resumeDownloadLink =
-    "https://drive.google.com/uc?export=download&id=1kuMgCZ5n9qlFfu_1EOo3H40AkQPKZTZO";
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -93,29 +90,11 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <a
-              href={resumeDownloadLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-4 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors flex items-center gap-2"
-            >
-              <Download size={16} />
-              Resume
-            </a>
           </nav>
         )}
 
         {isMobile && (
           <div className="flex items-center gap-2">
-            <a
-              href={resumeDownloadLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 transition-colors flex items-center gap-1 text-sm"
-            >
-              <Download size={14} />
-              Resume
-            </a>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <button
